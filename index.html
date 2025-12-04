@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terjék Tomi Fenyőfái – Kisvárda, Csillag utca 22.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description" content="Élő karácsonyfák Kisvárdán, a Csillag utca 22-ben: lucfenyő, ezüstfenyő, dán Nordmann és földlabdás fenyő talpba faragással, házhoz szállítással, forró teával és ünnepi hangulattal.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Terjék Tomi Fenyőfái – Kisvárda, Csillag utca 22.">
+  <meta property="og:description" content="Válogass élő karácsonyfák közül Kisvárdán: lucfenyő, ezüstfenyő, dán Nordmann és földlabdás fenyő talpba faragással, házhoz szállítással és forró teával.">
+  <meta property="og:type" content="website">
+  <!-- Ezt majd cseréld a saját domain + kép URL-edre -->
+  <meta property="og:url" content="https://pelda-domen.hu/">
+  <meta property="og:image" content="https://pelda-domen.hu/kepek/fenyo11.jpg">
+  <meta property="og:locale" content="hu_HU">
+
+  <!-- Twitter (opcionális, de jól jön) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terjék Tomi Fenyőfái – Kisvárda, Csillag utca 22.">
+  <meta name="twitter:description" content="Élő karácsonyfák Kisvárdán prémium kiszolgálással és ünnepi hangulattal.">
+  <meta name="twitter:image" content="https://pelda-domen.hu/kepek/fenyo11.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green-dark: #064e3b;
+      --green: #15803d;
+      --gold: #facc15;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #e0f2fe, #e5e7eb);
+      color: #111827;
+      overflow-x: hidden;
+      line-height:1.6;
+    }
+
+    a { color: inherit; }
+
+    /* HÓESÉS */
+    .snow {
+      pointer-events:none;
+      position:fixed;
+      inset:0;
+      z-index:9999;
+    }
+    .snow span {
+      position:absolute;
+      top:-10px;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.9);
+      animation:snowfall linear infinite;
+      filter:blur(.5px);
+    }
+    @keyframes snowfall {
+      0% { transform:translateY(0) rotate(0); opacity:1; }
+      100% { transform:translateY(110vh) rotate(360deg); opacity:0.2; }
+    }
+
+    /* HEADER */
+    header {
+      background:linear-gradient(135deg, rgba(21,128,61,.98), rgba(22,163,74,.98));
+      color:white;
+      padding:1.2rem 1rem;
+      position:sticky;
+      top:0;
+      z-index:50;
+      box-shadow:0 10px 25px rgba(15,118,110,.35);
+      backdrop-filter:blur(8px);
+    }
+
+    .topbar {
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    /* Gombok / CTA-k */
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0.65rem 1.4rem;
+      border-radius:999px;
+      border:2px solid transparent;
+      font-weight:600;
+      font-size:0.95rem;
+      text-decoration:none;
+      cursor:pointer;
+      transition:transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
+      white-space:nowrap;
+    }
+    .btn-primary {
+      background:var(--gold);
+      color:#1f2937;
+      box-shadow:0 10px 25px rgba(15,23,42,.35);
+    }
+    .btn-primary:hover {
+      transform:translateY(-1px) scale(1.02);
+      box-shadow:0 14px 30px rgba(15,23,42,.45);
+      background:#fbbf24;
+    }
+    .btn-outline {
+      background:transparent;
+      border-color:#e5e7eb;
+      color:white;
+    }
+    .btn-outline:hover {
+      background:white;
+      color:#064e3b;
+      transform:translateY(-1px) scale(1.02);
+      box-shadow:0 10px 22px rgba(15,23,42,.35);
+    }
+
+    /* HERO – zöld glitter */
+    .hero-wrapper {
+      position:relative;
+      background:linear-gradient(135deg,#15803d,#16a34a);
+      padding:2.5rem 1rem 3.5rem;
+      border-bottom-left-radius:2rem;
+      border-bottom-right-radius:2rem;
+      margin-bottom:2rem;
+      overflow:hidden;
+      box-shadow:0 20px 40px rgba(15,118,110,0.45);
+    }
+    .hero-wrapper::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.22) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,.10) 2px, transparent 2px);
+      background-size:180px 180px, 220px 220px, 140px 140px;
+      animation:glitter 14s linear infinite;
+      opacity:.45;
+    }
+    @keyframes glitter {
+      0% { background-position:0 0, 40px 60px, 120px 20px; }
+      100% { background-position:300px 600px, 180px 460px, 420px 320px; }
+    }
+
+    /* --- HERO LAYOUT + ANIMÁCIÓ --- */
+    .hero {
+      max-width:1100px;
+      margin:0 auto;
+      color:white;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:3rem;
+      text-align:left;
+      flex-wrap:wrap;
+    }
+
+    .hero-text,
+    .hero-gallery {
+      flex:1;
+      min-width:260px;
+      max-width:50%;
+    }
+
+    .hero-text {
+      opacity:0;
+      transform:translateY(15px);
+      animation:heroFadeUp 0.8s ease-out forwards;
+      animation-delay:0.05s;
+    }
+
+    .hero-gallery {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      opacity:0;
+      transform:translateY(20px);
+      animation:heroFadeUp 0.9s ease-out forwards;
+      animation-delay:0.2s;
+    }
+
+    @keyframes heroFadeUp {
+      0% {
+        opacity:0;
+        transform:translateY(20px);
+      }
+      100% {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .hero-badge {
+      display:inline-block;
+      background:rgba(15,118,110,.15);
+      border-radius:999px;
+      padding:0.35rem 0.9rem;
+      font-size:0.85rem;
+      margin-bottom:0.9rem;
+      border:1px solid rgba(209,250,229,.5);
+      backdrop-filter:blur(4px);
+    }
+
+    .hero h1 {
+      font-size:2.1rem;
+      line-height:1.15;
+      margin-bottom:0.8rem;
+    }
+    .hero h1 span {
+      color:var(--gold);
+    }
+
+    .hero p {
+      margin-bottom:0.9rem;
+      font-size:0.98rem;
+      max-width:32rem;
+    }
+
+    .hero-list {
+      margin:0.5rem 0 1rem;
+      list-style:none;
+    }
+    .hero-list li {
+      font-size:0.95rem;
+    }
+
+    .hero-actions {
+      margin-top:1.3rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.7rem;
+    }
+
+    .hero-main-img {
+      width:100%;
+      max-width:620px;
+      border-radius:1.4rem;
+      box-shadow:0 18px 40px rgba(0,0,0,.25);
+      display:block;
+    }
+
+    .hero-caption {
+      background:white;
+      color:#333;
+      padding:0.35rem 1rem;
+      display:inline-block;
+      margin-top:.7rem;
+      border-radius:999px;
+      font-size:.95rem;
+      box-shadow:0 6px 18px rgba(0,0,0,.18);
+    }
+
+    main {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 1rem 2rem;
+    }
+
+    .section-title {
+      font-size:1.6rem;
+      font-weight:700;
+      color:#064e3b;
+      margin-bottom:1rem;
+      display:flex;
+      align-items:center;
+      gap:.4rem;
+    }
+
+    /* A VERZIÓ – FENYŐ KÁRTYÁK */
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+      gap:1.1rem;
+    }
+    .card {
+      background:white;
+      border-radius:1.2rem;
+      padding:1.1rem 1.25rem;
+      box-shadow:0 10px 25px rgba(0,0,0,.15);
+    }
+    .badge {
+      display:inline-block;
+      padding:.25rem .6rem;
+      border-radius:999px;
+      font-size:.8rem;
+      font-weight:600;
+      margin-bottom:.5rem;
+    }
+
+    /* GALÉRIA – A JÓ (eredeti) verzió */
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(190px,1fr));
+      gap:.8rem;
+    }
+    .gallery-img-wrap {
+      border-radius:1rem;
+      overflow:hidden;
+      background:#020617;
+      box-shadow:0 8px 22px rgba(0,0,0,.2);
+    }
+    .gallery-img-wrap img {
+      width:100%;
+      height:210px;
+      object-fit:cover;
+      transition:transform .25s ease;
+      display:block;
+    }
+    .gallery-img-wrap:hover img {
+      transform:scale(1.04);
+    }
+
+    /* Reszponzív finomítások */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-text,
+      .hero-gallery {
+        max-width:100%;
+      }
+
+      .hero p,
+      .hero-list {
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-actions {
+        justify-content:center;
+      }
+    }
+
+    @media (max-width:600px) {
+      header {
+        padding:0.9rem 1rem;
+      }
+      .hero h1 {
+        font-size:1.7rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HÓESÉS -->
+<div class="snow"></div>
+<script>
+  const snowArea = document.querySelector(".snow");
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement("span");
+    const size = Math.random() * 4 + 2;
+    s.style.width = size+"px";
+    s.style.height = size+"px";
+    s.style.left = Math.random()*100 + "vw";
+    s.style.animationDuration = 4 + Math.random()*7 + "s";
+    s.style.animationDelay = Math.random()*10 + "s";
+    snowArea.appendChild(s);
+  }
+</script>
+
+<header>
+  <div class="topbar">
+    <div class="logo">
+      🎄 <strong style="margin-left:.4rem;">TERJÉK TOMI FENYŐFÁI</strong><br>
+      <small>Kisvárda • Csillag utca 22.</small>
+    </div>
+    <div>
+      Nyitva: H–Szo 8–18 • V 8–14<br>
+      <a class="btn btn-outline" href="https://www.facebook.com/profile.php?id=100045994526500">Facebook</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero-wrapper">
+  <section class="hero">
+
+    <div class="hero-text">
+      <div class="hero-badge">✨ Kencsúszís fenyő Kisvárdán – ajándék faragással és házhoz szállítással!</div>
+
+      <h1>Válogass élő <span>karácsonyfák</span> között a Csillag utcán!</h1>
+
+      <p>
+        Gyere be az udvarba, szimatold meg a gyantaillatot, hallgasd a krisztmöszös
+        zenét, igyál egy forró teát és válaszd ki a család új kedvenc fenyőfáját!
+      </p>
+
+      <ul class="hero-list">
+        <li><strong>Lucfenyő</strong> – 1–3 m</li>
+        <li><strong>Ezüstfenyő</strong> – 1,5–2,2 m</li>
+        <li><strong>Dán Nordmann</strong> – 1–3,5 m</li>
+        <li><strong>Földlabdás Nordmann</strong> – kiültethető 🌱</li>
+      </ul>
+
+      <div>🕗 <strong>NYITVA:</strong> H–Szo 08–18 • V 08–14</div>
+      <div>🅿️ Parkolás az udvarban</div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#valasztek">Milyen a választék?</a>
+        <a class="btn btn-outline" href="#terkep">Hol találsz meg?</a>
+      </div>
+    </div>
+
+    <div class="hero-gallery">
+      <img src="kepek/fenyo11.jpg" class="hero-main-img" loading="lazy" alt="Élő karácsonyfák a Csillag utcai udvarban">
+      <p class="hero-caption">Válassz élőben – fotó nem adja vissza az illatot!</p>
+    </div>
+
+  </section>
+</div>
+
+<main>
+
+<!-- =======================
+     Milyen a választék?
+======================= -->
+<section id="valasztek" class="section" style="margin-top:2rem;">
+  <h2 class="section-title">🌲 Milyen a választék?</h2>
+
+  <div class="cards">
+
+    <!-- Lucfenyő -->
+    <article class="card">
+      <div class="badge" style="background:#e0f2fe; color:#0369a1;">🌲 1–3 méter</div>
+      <h3>Lucfenyő</h3>
+      <ul>
+        <li>Hagyományos illat</li>
+        <li>Erős karácsonyos hangulat</li>
+        <li>A klasszikus kedvenc</li>
+      </ul>
+    </article>
+
+    <!-- Ezüstfenyő -->
+    <article class="card">
+      <div class="badge" style="background:#f0f9ff; color:#0ea5e9;">❄️ 1,5–2,2 méter</div>
+      <h3>Ezüstfenyő</h3>
+      <ul>
+        <li>Ezüstös, elegáns tűk</li>
+        <li>Díszítéshez tökéletes</li>
+        <li>Különleges megjelenés</li>
+      </ul>
+    </article>
+
+    <!-- Dán Nordmann -->
+    <article class="card">
+      <div class="badge" style="background:#fef9c3; color:#ca8a04;">🇩🇰 1–3,5 méter</div>
+      <h3>Dán Nordmann</h3>
+      <ul>
+        <li>Dús, tökéletes forma</li>
+        <li>Nem hullik könnyen</li>
+        <li>A legnépszerűbb prémium fa</li>
+      </ul>
+    </article>
+
+    <!-- Földlabdás -->
+    <article class="card">
+      <div class="badge" style="background:#dcfce7; color:#15803d;">🌱 Kiültethető tavasszal</div>
+      <h3>Földlabdás Nordmann</h3>
+      <ul>
+        <li>Élő fa, gyökérzettel</li>
+        <li>Tavasszal elültethető</li>
+        <li>Környezetbarát választás</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- =======================
+     MIT KAPSZ AJÁNDÉKBA?
+======================= -->
+<section id="ajandek" class="section" style="margin-top:3rem;">
+  <h2 class="section-title">🎁 Mit kapsz AJÁNDÉKBA❓️ MINDENT IS</h2>
+
+  <div class="cards" style="grid-template-columns:repeat(auto-fit, minmax(260px,1fr));">
+
+    <article class="card">
+      <h3>🪓 Talpba faragás</h3>
+      <p>Ahogy kéred, úgy faragom bele. Stabil lesz, mint a katonák.</p>
+    </article>
+
+    <article class="card">
+      <h3>🚛 Házhoz szállítás Kisvárdán</h3>
+      <p>Nem kell cipekedned – házhoz viszem.</p>
+    </article>
+
+    <article class="card">
+      <h3>🪪 Foglalás / őrzés</h3>
+      <p>Kiválasztod → félreteszem → vár rád.</p>
+    </article>
+
+    <article class="card">
+      <h3>☕️ Forró tea</h3>
+      <p>Amíg nézelődsz, jólesik kicsit melegedni.</p>
+    </article>
+
+    <article class="card">
+      <h3>🍬 Szaloncukor</h3>
+      <p>Csak úgy… mert karácsony van.</p>
+    </article>
+
+    <article class="card">
+      <h3>🎶 Krisztmöszös háttérzene</h3>
+      <p>Azonnali ünnepi hangulat.</p>
+    </article>
+
+    <article class="card">
+      <h3>🤠 Az egyedülálló sármom</h3>
+      <p>Idén <em>soványabban, mint tavaly</em> 🤭</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- =======================
+        GALÉRIA
+======================= -->
+<section class="section" style="margin-top:3rem;">
+  <h2 class="section-title">📸 Fényképes ízelítő</h2>
+
+  <p style="color:#6b7280; margin-bottom:1rem; font-size:0.92rem;">
+    A képek helyben készültek – ilyen fenyőerdő költözött a Csillag utcára.
+  </p>
+
+  <div class="gallery-grid" style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+      gap:0.9rem;
+  ">
+
+    <!-- 1 -->
+    <div class="gallery-img-wrap" style="
+         border-radius:1rem;
+         overflow:hidden;
+         background:#020617;
+         box-shadow:0 8px 22px rgba(0,0,0,0.18);
+    ">
+      <img src="kepek/fenyo3.jpg" class="gallery-img" loading="lazy" alt="Karácsonyfa kínálat – fenyősor Kisvárdán">
+    </div>
+
+    <!-- 2 -->
+    <div class="gallery-img-wrap" style="
+         border-radius:1rem;
+         overflow:hidden;
+         background:#020617;
+         box-shadow:0 8px 22px rgba(0,0,0,0.18);
+    ">
+      <img src="kepek/fenyo4.jpg" class="gallery-img" loading="lazy" alt="Kivilágított karácsonyfák az udvarban">
+    </div>
+
+    <!-- 3 -->
+    <div class="gallery-img-wrap" style="
+         border-radius:1rem;
+         overflow:hidden;
+         background:#020617;
+         box-shadow:0 8px 22px rgba(0,0,0,0.18);
+    ">
+      <img src="kepek/fenyo5.jpg" class="gallery-img" loading="lazy" alt="Válogatható élő fenyőfák">
+    </div>
+
+    <!-- 4 -->
+    <div class="gallery-img-wrap" style="
+         border-radius:1rem;
+         overflow:hidden;
+         background:#020617;
+         box-shadow:0 8px 22px rgba(0,0,0,0.18);
+    ">
+      <img src="kepek/fenyo12.jpg" class="gallery-img" loading="lazy" alt="Nordmann fenyők sorban">
+    </div>
+
+    <!-- 5 -->
+    <div class="gallery-img-wrap" style="
+         border-radius:1rem;
+         overflow:hidden;
+         background:#020617;
+         box-shadow:0 8px 22px rgba(0,0,0,0.18);
+    ">
+      <img src="kepek/fenyo7.jpg" class="gallery-img" loading="lazy" alt="Karácsonyfa vásár hangulat">
+    </div>
+
+    <!-- 6 -->
+    <div class="gallery-img-wrap" style="
+         border-radius:1rem;
+         overflow:hidden;
+         background:#020617;
+         box-shadow:0 8px 22px rgba(0,0,0,0.18);
+    ">
+      <img src="kepek/fenyo8.jpg" class="gallery-img" loading="lazy" alt="Fenyőfák közelről">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =======================
+        TÉRKÉP
+======================= -->
+<section id="terkep" class="section" style="margin-top:3.5rem;">
+  <h2 class="section-title">📍 Hol találsz meg?</h2>
+
+  <p style="color:#6b7280; margin-bottom:1rem; font-size:0.92rem;">
+    4600 Kisvárda, Csillag utca 22 – nézd a táblát: „Terjék Tomi Fenyőfái”.
+  </p>
+
+  <div class="map-card" style="
+       margin-top:0.7rem;
+       border-radius:1.2rem;
+       overflow:hidden;
+       border:1px solid rgba(148,163,184,.6);
+       box-shadow:0 8px 22px rgba(0,0,0,.18);
+  ">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.1426247120512!2d22.081442067122886!3d48.2263744449746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4738ecfbe7eb4491%3A0x6511c48adf51a08!2sKisv%C3%A1rda%2C%20Csillag%20u.%2022%2C%204600!5e1!3m2!1shu!2hu!4v1764790557562!5m2!1shu!2hu"
+      width="100%"
+      height="320"
+      style="border:0;"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+<!-- =======================
+        FOOTER
+======================= -->
+<footer style="
+    max-width:1100px;
+    margin:0 auto;
+    padding:2rem 1rem 3rem;
+    text-align:center;
+    font-size:0.9rem;
+    color:#475569;
+">
+  <strong style="color:#064e3b;">Terjék Tomi Fenyőfái</strong> • Kisvárda, Csillag utca 22. 🎄  
+  <div style="margin-top:0.4rem; font-size:0.8rem;">
+    Kencsúszís karácsonyfa élmény – talpba faragással, házhoz szállítással.
+  </div>
+  <div style="margin-top:0.4rem; font-size:0.8rem;">
+    &copy; <span id="ev"></span> Terjék Tomi – minden jog fenntartva.
+  </div>
+</footer>
+
+</main>
+
+<script>
+  // Footer évszám automatikusan
+  const yearSpan = document.getElementById('ev');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+</body>
+</html>
